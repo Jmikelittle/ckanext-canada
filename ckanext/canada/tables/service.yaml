@@ -84,8 +84,8 @@ resources:
       en: External Service or Internal Enterprise Service
       fr: Service externe ou service intégré interne
     description:
-      en: Identifies the service as either an external service or internal enterprise service, as defined in the Policy on Service.
-      fr: Identifie le service en tant que service externe ou service interne intégré au sens des définitions données dans la Politique sur les services.
+      en: Identifies the service as either an external service or internal enterprise service, as defined in the Policy on Service and digital.
+      fr: Identifie le service en tant que service externe ou service interne intégré au sens des définitions données dans la Politique sur les services et le numérique.
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
@@ -94,15 +94,15 @@ resources:
     datastore_type: text
     excel_full_text_choices: true
     choices:
-      EI:
-        en: External/Internal Enterprise Service
-        fr: Services externes/internes intégrés
-      EX:
+      internal:
+        en: Internal Service
+        fr: Service interne
+      external:
         en: External Service
-        fr: Services externes
-      IN:
+        fr: Service externe
+      int_enterprise:
         en: Internal Enterprise Service
-        fr: Services internes intégrés
+        fr: Service interne intégré
 
   # 3.6
   - datastore_id: service_type
@@ -111,61 +111,64 @@ resources:
       fr: Type de service
     description:
       en: Identifies the external or internal service type as outlined in the Guideline on Service Management.
-      fr: Indique le type de service externe ou interne.
+      fr: Indique le type de service externe ou interne comme souligné par la Ligne directrice sur la gestion des services.
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
     validation: This field must not be empty
-    occurrence: Single
+    occurrence: Multiple
     datastore_type: text
     excel_full_text_choices: true
     choices:
-      AC:
+      acq:
         en: Acquisition Services
         fr: Services d’acquisition
-      AD:
+      adv:
         en: Advisory Services
         fr: Services consultatifs
-      COM:
+      comm:
         en: Communications Services
         fr: Services de communication
-      ED:
+      ecu:
         en: Educational, Recreational and Cultural Encounters
         fr: Rencontres axées sur des activités éducatives, récréatives et culturelles
-      FIN:
+      fm:
         en: Financial Management Services
         fr: Services de gestion financière
-      HR:
+      gnc:
+        en: Grants and Contributions
+        fr: Subventions et contributions
+      hr:
         en: Human Resources Management Services
         fr: Services de gestion des ressources humaines
-      HVRT:
+      reg_vol:
         en: High Volume Regulatory Transaction
         fr: Opérations réglementaires à demande élevée
-      IM:
+      im:
         en: Information Management Services
         fr: Services de gestion de l’information
-      IT:
+      its:
         en: Information Technology Services
         fr: Services de technologie de l’information
-      LEG:
+      legal:
         en: Legal Services
         fr: Services juridiques
-      MAN:
+      mgnt:
         en: Management and Oversight Services
         fr: Services de gestion et de surveillance
-      MAT:
+      mat:
         en: Materiel Services
         fr: Services de gestion du matériel
-      REG:
+      reg:
         en: Regulatory Compliance and Enforcement
         fr: Conformité aux règlements et application des règlements
-      RES:
+      resource:
         en: Resources
         fr: Ressources
-      RP:
+      prop:
         en: Real Property Services
         fr: Services immobiliers
-      RU:
+      rule:
         en: Rule Making
         fr: Établissement de règles
 
@@ -181,32 +184,20 @@ resources:
     excel_required: true
     format_type: Controlled List
     validation: This field must not be empty
-    occurrence: Single
+    occurrence: multiple
     datastore_type: text
     excel_full_text_choices: true
     choices:
-      '1':
+      priority:
         en: Priority Service
         fr: Service prioritaire
-      '2':
+      critical:
         en: Critical Service
         fr: Service critique
-      '3':
+      essential:
         en: Essential Service
         fr: Service essentiel
-      '4':
-        en: Priority Service & Mission Critical Service
-        fr: Service prioritaire et Service critique
-      '5':
-        en: Priority Service & Essential Service
-        fr: Service prioritaire et Service essentiel
-      '6':
-        en: Critical Service & Essential Service
-        fr: Service critique et Service essentiel
-      '7':
-        en: Priority Service, Critical Service & Essential Service
-        fr: Service prioritaire, service critique et Service essentiel
-      '8':
+      none:
         en: None of the above
         fr: Aucun des éléments ci-dessus
 
