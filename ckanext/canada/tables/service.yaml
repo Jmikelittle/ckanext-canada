@@ -90,7 +90,7 @@ resources:
     excel_required: true
     format_type: Controlled List
     validation: This field must not be empty
-    occurrence: Single
+    occurrence: Multiple
     datastore_type: text
     excel_full_text_choices: true
     choices:
