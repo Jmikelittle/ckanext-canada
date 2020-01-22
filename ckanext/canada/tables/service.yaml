@@ -486,7 +486,10 @@ resources:
         • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        
+        Remarque : 
+        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
+        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -509,7 +512,9 @@ resources:
         • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Remarque : 
+        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
+        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -532,7 +537,9 @@ resources:
         • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Remarque : 
+        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
+        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -555,7 +562,9 @@ resources:
         • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Remarque : 
+        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
+        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -578,7 +587,9 @@ resources:
         • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Remarque : 
+        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
+        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -601,7 +612,9 @@ resources:
         • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Remarque : 
+        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
+        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
