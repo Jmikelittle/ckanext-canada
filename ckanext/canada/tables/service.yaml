@@ -373,6 +373,9 @@ resources:
       IG:
         en: Internal to Government
         fr: Interne au gouvernement
+      EV:
+        en: Environmental
+        fr: Environnemental
 
   # 3.18 (was user_fee)
   - datastore_id: service_fee
@@ -845,6 +848,9 @@ resources:
       POST:
         en: Postal Mail
         fr: Courrier postal
+      OTHER:
+        en: Other
+        fr: Autre
       NONE:
         en: None
         fr: Aucune des réponses
