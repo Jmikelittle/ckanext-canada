@@ -39,7 +39,7 @@ resources:
       fr: Numéro d'identification du service
     description:
       en: The unique number assigned by the department to a service in the inventory to make it easier to refer to specific services.
-      fr: Le numéro unique attribué par le ministère ou l’organisme à un service dans le répertoire afin de faciliter le référencement à des services précis. (p. ex. 1, 2, etc.)
+      fr: Le numéro unique attribué par le ministère ou l’organisme à un service dans le répertoire afin de faciliter le référencement à des services précis. 
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -78,6 +78,36 @@ resources:
     occurrence: Single
     datastore_type: text
 
+  # 3.?
+  - datastore_id: department_name_en
+    label:
+      en: Department Name (English)
+      fr: Nom du ministère (en anglais)
+    description:
+      en: Identifies the applied title of the department or agency.
+      fr: .
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+ 
+ # 3.?
+  - datastore_id: department_name_fr
+    label:
+      en: Department Name (French)
+      fr: Nom de ministère (en français)
+    description:
+      en: Identifies the applied title of the department or agency.
+      fr: .
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    
   # 3.5
   - datastore_id: external_internal
     label:
@@ -191,9 +221,9 @@ resources:
       priority:
         en: Priority Service
         fr: Service prioritaire
-      critical:
-        en: Critical Service
-        fr: Service critique
+      #critical: ## Security would like us to remove this field. 
+        #en: Critical Service
+        #fr: Service critique
       essential:
         en: Essential Service
         fr: Service essentiel
@@ -208,7 +238,7 @@ resources:
       fr: Description du service (en anglais)
     description:
       en: Provides a brief description of the service, in plain language.
-      fr: Offre une brève description du service.
+      fr: Offre une brève description du service, en langage simple.
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -223,45 +253,13 @@ resources:
       fr: Description du service (en français)
     description:
       en: Provides a brief description of the service, in plain language.
-      fr: Offre une brève description du service.
+      fr: Offre une brève description du service, en langage simple.
     obligation: Mandatory
     excel_required: true
     format_type: Free text
     validation: This field must not be empty
     occurrence: Single
     datastore_type: text
-
-  # 3.10
-  - datastore_id: authority_en
-    label:
-      en: Authority (English)
-      fr: Instruments habilitants (en anglais)
-    description:
-      en: Identifies the relevant legislation and policies that grant the authority for the establishment of the service.
-      fr: Indique le nom du groupe au sein de l’organisation qui est responsable du service.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    excel_column_width: 51
-
-  # 3.11
-  - datastore_id: authority_fr
-    label:
-      en: Authority (French)
-      fr: Instruments habilitants (en français)
-    description:
-      en: Identifies the relevant legislation and policies that grant the authority for the establishment of the service.
-      fr: Indique le nom du groupe au sein de l’organisation qui est responsable du service.
-    obligation: Mandatory
-    excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    excel_column_width: 51
 
   # 3.12 (new field)
   - datastore_id: service_url_en
@@ -323,20 +321,20 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.16 (was program_id_number)
-  - datastore_id: program_id_code
+ # 3.16 (New field)
+  - datastore_id: last_GBA
     label:
-      en: Program ID Code
-      fr: Code d'identification du programme
+      en: Year of last GBA+ 
+      fr: #TODO
     description:
-      en: Identifies the unique program code associated with program elements for all strategic outcomes, programs, sub-programs, and sub-sub-programs. For departments/agencies that have moved to the Departmental Results Framework (DRF), the Program codes in the government-wide Chart of Accounts can be used. Corporate planners in the department/agency who are responsible for the Policy on Results can assist in identifying this, if needed.
-      fr: Indique le code de programme unique associé aux éléments de programme pour tous les résultats stratégiques, les programmes, les sous-programmes et les sous-sous-programmes. Les planificateurs ministériels du ministère ou de l’organisme responsables de la Politique sur les résultats peuvent aider à déterminer le code d’identification du programme, au besoin.
+      en: Identifies the fiscal year when the most recent GBA+ review was completed
+      fr: #TODO
     obligation: Mandatory
     excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
+    validation: 
     occurrence: Single
     datastore_type: text
+    choices_file: choices/service_fiscal_yr.yaml
 
   # 3.17
   - datastore_id: client_target_groups
@@ -345,8 +343,7 @@ resources:
       fr: Clients/groupes cibles
     description:
       en: "Identifies the clients or target groups of the service.  Note: Should you require further clarification with regard to these categories, please consult the Standard on Tagging, in the Policy on Results."
-      fr: "Identifie les clients ou les groupes de services cibles.
-      Remarque : Pour obtenir d’autres éclaircissements relativement à ces catégories, veuillez consulter la Norme sur l’étiquetage prévue dans la Politique sur les résultats."
+      fr: "Identifie les clients ou les groupes de services cibles. Remarque : Pour obtenir d’autres éclaircissements relativement à ces catégories, veuillez consulter la Norme sur l’étiquetage prévue dans la Politique sur les résultats."
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
@@ -466,7 +463,9 @@ resources:
         • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+        Remarque : 
+        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
+        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -504,11 +503,11 @@ resources:
   # 3.23 (was volumes_per_channel_telephone)
   - datastore_id: calls_received
     label:
-      en: Number of Telephone Calls Received
-      fr: Nombre d’appels téléphoniques reçus
+      en: Number of Telephone Enquiries Received
+      fr: Nombre des demandes téléphoniques reçus
     description:
       en: |
-        Identifies the number of telephone calls received for the service in a fiscal year.
+        Identifies the number of telephone enquiries received for the service in a fiscal year.
 
         Notes:
         • If the service is not offered via telephone, please indicate that this field is not applicable (NA).
@@ -551,56 +550,6 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.25 (new field)
-  - datastore_id: email_applications
-    label:
-      en: Number of Applications Submitted via Email
-      fr: Nombre de demandes soumises par courriel
-    description:
-      en: |
-        Identifies the number of applications received through Email in a fiscal year for the service.
-
-        Notes:
-        • If the service cannot be applied for via Email, please indicate that this field is not applicable (NA).
-        • If data is not available, please indicate that there is no data (ND).
-      fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : 
-        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
-    obligation: Mandatory
-    excel_required: true
-    excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
-    format_type: Numeric, NA or ND
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 3.26 (new field)
-  - datastore_id: fax_applications
-    label:
-      en: Number of Applications via Fax
-      fr: Nombre de demandes soumises par télécopieur
-    description:
-      en: |
-        Identifies the number of applications received through fax in a fiscal year for the service.
-
-        Notes:
-        • If the service cannot be applied for via fax, please indicate that this field is not applicable (NA).
-        • If data is not available, please indicate that there is no data (ND).
-      fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : 
-        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
-    obligation: Mandatory
-    excel_required: true
-    excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
-    format_type: Numeric, NA or ND
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
   # 3.27 (was volumes_per_channel_mail)
   - datastore_id: postal_mail_applications
     label:
@@ -612,6 +561,31 @@ resources:
 
         Notes:
         • If the service cannot be applied for via postal mail, please indicate that this field is not applicable (NA).
+        • If data is not available, please indicate that there is no data (ND).
+      fr: |
+        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
+        Remarque : 
+        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
+        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+    obligation: Mandatory
+    excel_required: true
+    excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
+    format_type: Numeric, NA or ND
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+
+  # 3.? (New Field)
+  - datastore_id: other_applications
+    label:
+      en: Number of Applications Submitted via other channels, such as email or fax
+      fr: Nombre de demandes soumises par les autre modes de prestations, par example courriel ou 
+    description:
+      en: |
+        Identifies the number of applications received through other channels in a fiscal year for each service.
+
+        Notes:
+        • If the service cannot be applied for via other channels, please indicate that this field is not applicable (NA).
         • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
@@ -881,44 +855,6 @@ resources:
     occurrence: Single
     datastore_type: text
 
-# 3.37 (new field)
-  - datastore_id: harmonized_service_id 
-    label:
-      en: Harmonized Service ID
-      fr: Désignation du service harmonisé
-    description:
-      en: "This service ID was created to match up unique services over multiple years, and create a standard format amoung all services in the inventory. This links services to their service standards."
-      fr: "Celle désignation du service a été créé pour faire correspondre dues services uniques sur plusieurs années et créer un format standard pour tous les services de l'inventaire. Cela relie les services à leurs norms relatives aux services."
-    obligation: Optional
-    format_type: Free text
-    occurrence: Single
-    datastore_type: text
-
-# 3.38 (new field)
-  - datastore_id: harmonized_service_name_en
-    label:
-      en: Harmonized Service Name (english)
-      fr: nom_du_service_harmonisé (anglais)
-    description:
-      en: "A new column with an edited service name was created to provide consistent service names over both years; by default using their newest name. This was necessary because a minority of services changed names slightly year over year."
-      fr: "Une nouvelle colonne avec un nom de service édité a été créée pour fournir des noms de service cohérents pour les deux années; par défaut en utilisant leur nom le plus récent. Cela était nécessaire car une minorité de services a changeé de nom légèrement d'une année à l'autre."
-    obligation: Optional
-    format_type: Free text
-    occurrence: Single
-    datastore_type: text
-
-# 3.39 (new field)
-  - datastore_id: harmonized_service_name_fr
-    label:
-      en: Harmonized Service Name (french)
-      fr: nom_du_service_harmonisé (français)
-    description:
-      en: "A new column with an edited service name was created to provide consistent service names over both years; by default using their newest name. This was necessary because a minority of services changed names slightly year over year."
-      fr: "Une nouvelle colonne avec un nom de service édité a été créée pour fournir des noms de service cohérents pour les deux années; par défaut en utilisant leur nom le plus récent. Cela était nécessaire car une minorité de services a changeé de nom légèrement d'une année à l'autre."
-    obligation: Optional
-    format_type: Free text
-    occurrence: Single
-    datastore_type: text
 
   - datastore_id: record_created
     label: Record Creation Time
@@ -1085,7 +1021,7 @@ resources:
       fr: Numéro d'identification du service
     description:
       en: The unique number assigned by the department to a service in the inventory to make it easier to refer to specific services.
-      fr: Le numéro unique attribué par le ministère ou l’organisme à un service dans le répertoire afin de faciliter le référencement à des services précis. (p. ex. 1, 2, etc.)
+      fr: Le numéro unique attribué par le ministère ou l’organisme à un service dans le répertoire afin de faciliter le référencement à des services précis.
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -1261,17 +1197,17 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.11
-  - datastore_id: q1_performance_result
+  # 4.11 (new field, replaces quarterly reports)
+  - datastore_id: volume_meeting_target
     label:
-      en: Q1 Business Volume That Met Service Standard Target
-      fr: Q1 Volume d’activités qui respectent la cible de la norme relative aux services
+      en: Business Volume That Met Service Standard Target
+      fr: Volume d’activités qui respectent la cible de la norme relative aux services
     description:
       en: |
-        Identifies the number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the first quarter of the fiscal year that met a particular service standard target for a service. (Q1: April 1- June 30)
+        Identifies the number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the fiscal year that met a particular service standard target for a service.
         • If data is not available, please indicate that there is no data (“ND”).
       fr: |
-        Indique le nombre d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du premier trimestre de l’exercice qui ont respecté une norme relative aux services particulière à un service. (Q1 : du 1er avril au 30 juin)
+        Indique le nombre d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours de l’exercice qui ont respecté une norme relative aux services particulière à un service. 
         • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
     obligation: Mandatory
     excel_required: true
@@ -1280,149 +1216,22 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.12
-  - datastore_id: q1_business_volume
+  # 4.12 (new field, replaces quarterly reports)
+  - datastore_id: total_volume
     label:
-      en: Q1 Total Business Volume
-      fr: Q1 Volumes des activités totaux
+      en: Total Volume
+      fr: Volumes totaux
     description:
       en: |
-        Identifies the total number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the first quarter of the fiscal year. (Q1: April 1- June 30)
+        Identifies the total number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the fiscal year.
         • If data is not available, please indicate that there is no data (ND).
       fr: |
-        Indique le nombre total d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du premier trimestre de l’exercice. (Q1 : du 1er avril au 30 juin)
+        Indique le nombre total d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours de l’exercice. 
         • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
     obligation: Mandatory
     excel_required: true
     format_type: Numeric or ND
     validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 4.13
-  - datastore_id: q2_performance_result
-    label:
-      en: Q2 Business Volume That Met Service Standard Target
-      fr: Q2 Volume d’activités qui respectent la cible de la norme relative aux services
-    description:
-      en: |
-        Identifies the number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) processed during the second quarter of the fiscal year that met a particular service standard target for a service. (Q2: July 1 – September 30)
-        • If data is not available, please indicate that there is no data (ND).
-      fr: |
-        Indique le nombre d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du premier trimestre de l’exercice qui ont respecté une norme relative aux services particulière à un service. (Q2 : 1er juillet au 30 septembre)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
-    obligation: Mandatory
-    excel_required: true
-    format_type: Numeric or ND
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 4.14
-  - datastore_id: q2_business_volume
-    label:
-      en: Q2 Total Business Volume
-      fr: Q2 Volumes des activités totaux
-    description:
-      en: |
-        Identifies the total number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the second quarter of the fiscal year. (Q2: July 1 – September 30)
-        • If data is not available, please indicate that there is no data (ND).
-      fr: |
-        Indique le nombre total d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du deuxième trimestre de l’exercice. (Q2 : 1er juillet au 30 septembre)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
-    obligation: Mandatory
-    excel_required: true
-    format_type: Numeric or ND
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 4.15
-  - datastore_id: q3_performance_result
-    label:
-      en: Q3 Business Volume That Met Service Standard Target
-      fr: Q3 Volume d’activités qui respectent la cible de la norme relative aux services
-    description:
-      en: |
-        Identifies the number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the third quarter of the fiscal year that met a particular service standard target for a service. (Q3: October 1 – December 31)
-        • If data is not available, please indicate that there is no data (ND).
-      fr: |
-        Indique le nombre d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du troisième trimestre de l’exercice qui ont respecté une norme relative aux services particulière à un service. (Q3 : du 1er octobre au 31 décembre)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
-    obligation: Mandatory
-    excel_required: true
-    format_type: Numeric or ND
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 4.16
-  - datastore_id: q3_business_volume
-    label:
-      en: Q3 Total Business Volume
-      fr: Q3 Volumes des activités totaux
-    description:
-      en: |
-        Identifies the total number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the third quarter of the fiscal year. (Q3: October 1 – December 31)
-        • If data is not available, please indicate that there is no data (“ND”).
-      fr: |
-        Indique le nombre total d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du troisième trimestre de l’exercice. (Q3: du 1er octobre au 31 décembre)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
-    obligation: Mandatory
-    excel_required: true
-    format_type: Numeric or ND
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 4.17
-  - datastore_id: q4_performance_result
-    label:
-      en: Q4 Business Volume That Met Service Standard Target
-      fr: Q4 Volume d’activités qui respectent la cible de la norme relative aux services
-    description:
-      en: |
-        Identifies the number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the fourth quarter of the fiscal year that met a particular service standard target for a service. (Q4: January 1 – March 31)
-        • If data is not available, please indicate that there is no data (“ND”).
-      fr: |
-        Indique le nombre d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours du quatrième trimestre de l’exercice qui ont respecté une norme relative aux services particulière à un service. (Q4: du 1er janvier au 31 mars)
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« AD »).
-    obligation: Mandatory
-    excel_required: true
-    format_type: Numeric or ND
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 4.18
-  - datastore_id: q4_business_volume
-    label:
-      en: Q4 Total Business Volume
-      fr: Q4 Volumes des activités totaux
-    description:
-      en: |
-        Identifies the total number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the fourth quarter of the fiscal year. (Q4: du 1er janvier au 31 mars)
-        • If data is not available, please indicate that there is no data (ND).
-      fr: |
-        Indique le nombre total d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées) relativement à un service au cours du quatrième trimestre de l’exercice. (Q4: du 1er janvier au 31 mars)
-        Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
-    obligation: Mandatory
-    excel_required: true
-    format_type: Numeric or ND
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 4.19 (new field)
-  - datastore_id: harmonized_service_id 
-    label:
-      en: Harmonized Service ID
-      fr: Désignation du service harmonisé
-    description:
-      en: "This service ID was created to match up unique services over multiple years, and create a standard format amoung all services in the inventory. This links services to their service standards."
-      fr: "Celle désignation du service a été créé pour faire correspondre dues services uniques sur plusieurs années et créer un format standard pour tous les services de l'inventaire. Cela relie les services à leurs norms relatives aux services."
-    obligation: Optional
-    format_type: Free text
     occurrence: Single
     datastore_type: text
 
