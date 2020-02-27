@@ -352,25 +352,25 @@ resources:
     datastore_type: _text
     excel_column_width: 21
     choices:
-      PP:
+      persons:
         en: Persons
         fr: Particuliers
-      IO:
+      non_profit:
         en: Non Profit Institutions and Organizations
         fr: Institutions et organismes sans but lucratif
-      ES:
+      economic:
         en: Economic Segments (Businesses)
         fr: Segments économiques (entreprises)
-      FE:
+      foreign:
         en: Foreign Entities
         fr: Entités étrangères
       PTC:
         en: Provinces, Territories or Communities
         fr: Provinces, territoires et collectivités
-      IG:
+      internal_gov:
         en: Internal to Government
         fr: Interne au gouvernement
-      EV:
+      environmental:
         en: Environmental
         fr: Environnemental
 
@@ -804,28 +804,28 @@ resources:
     occurrence: Multiple
     datastore_type: _text
     choices:
-      ONL:
+      online:
         en: Online
         fr: En ligne
-      TEL:
+      tel:
         en: Telephone
         fr: Téléphone
-      IP:
+      person:
         en: In-Person
         fr: En personne
-      EML:
+      email:
         en: Email
         fr: Courriel
-      FAX:
+      fax:
         en: Fax
         fr: Télécopieur
-      POST:
+      post:
         en: Postal Mail
         fr: Courrier postal
-      OTHER:
+      other:
         en: Other
         fr: Autre
-      NONE:
+      none:
         en: None
         fr: Aucune des réponses
 
@@ -1119,16 +1119,16 @@ resources:
     occurrence: Multiple
     datastore_type: _text
     choices:
-      TML:
+      timeliness:
         en: Timeliness
         fr: Accès à l’information
-      ACY:
+      accuracy:
         en: Accuracy
         fr: Temps opportun
-      ACS:
+      access:
         en: Access
         fr: Exactitude
-      OTH:
+      other:
         en: Other
         fr: Autre
 
