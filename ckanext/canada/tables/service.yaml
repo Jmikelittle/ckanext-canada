@@ -1132,6 +1132,28 @@ resources:
         en: Other
         fr: Autre
 
+  # 4.?
+  - datastore_id: target_type
+    label:
+      en: Target Type
+      fr: 
+    description:
+      en: Identifies the type of service standard target.
+      fr: 
+    obligation: Mandatory
+    excel_required: true
+    format_type: Controlled List
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: _text
+    choices:
+      percentage:
+        en: Percentage of outcomes
+        fr: 
+      other_type:
+        en: Other type of target
+        fr: 
+        
   # 4.7
   - datastore_id: service_std_target
     label:
@@ -1146,58 +1168,7 @@ resources:
     occurrence: Single
     datastore_type: numeric
 
-  # 4.8
-  - datastore_id: gcss_tool_fiscal_yr
-    label:
-      en: Last Service Standard Review Using GC Service Standard Assessment Tool
-      fr: Dernier examen de la norme relative aux services à l’aide de l’outil d’évaluation des normes relatives aux services du GC
-    description:
-      en: "Identifies the fiscal year in which the service standard was last reviewed using the GC Service Standard Assessment Tool available on the GC Service Policy GCPedia page. ( http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance )"
-      fr: "Indique l’exercice au cours duquel la norme relative aux services a été examinée 
-pour la dernière fois à l’aide de l’outil d’évaluation des normes relatives aux 
-services du GC accessible sur la page GCpédia de la Politique sur les services du 
-GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
-    obligation: Mandatory
-    excel_required: true
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-    choices_file: choices/service_fiscal_yr.yaml
-
-  # 4.9
-  - datastore_id: realtime_result_url_en
-    label:
-      en: URL to Real-Time Performance Results (English)
-      fr: URL aux résultats de rendement en temps réel (anglais)
-    description:
-      en: "Identifies the departmental webpage where the real-time performance results for a service are published. 
-    • If data is not available, please indicate that there is no data (“ND”)."
-      fr: "Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »)."
-    obligation: Mandatory
-    excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 4.10
-  - datastore_id: realtime_result_url_fr
-    label:
-      en: URL to Real-Time Performance Results (French)
-      fr: URL aux résultats de rendement en temps réel (français)
-    description:
-      en: |
-        Identifies the departmental webpage where the real-time performance results for a service are published.
-        • If data is not available, please indicate that there is no data (“ND”).
-      fr: "Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »)."
-    obligation: Mandatory
-    excel_required: true
-    format_type: Free text
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 4.11 (new field, replaces quarterly reports)
+# 4.11 (new field, replaces quarterly reports)
   - datastore_id: volume_meeting_target
     label:
       en: Business Volume That Met Service Standard Target
@@ -1235,6 +1206,164 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
+  # 4.? (New entry potentially)
+  - datastore_id: performance
+    label:
+      en: Performance
+      fr: 
+    description:
+      en: |
+        Identifies the result achieved for this service standard. This is the volume_meeting_target divided by the total_volume
+      fr: |
+        #TODO 
+    obligation: Mandatory
+    excel_required: false
+    format_type: Numeric or ND
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+  # 4.8
+  - datastore_id: gcss_tool_fiscal_yr
+    label:
+      en: Last Service Standard Review Using GC Service Standard Assessment Tool
+      fr: Dernier examen de la norme relative aux services à l’aide de l’outil d’évaluation des normes relatives aux services du GC
+    description:
+      en: "Identifies the fiscal year in which the service standard was last reviewed using the GC Service Standard Assessment Tool available on the GC Service Policy GCPedia page. ( http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance )"
+      fr: "Indique l’exercice au cours duquel la norme relative aux services a été examinée 
+pour la dernière fois à l’aide de l’outil d’évaluation des normes relatives aux 
+services du GC accessible sur la page GCpédia de la Politique sur les services du 
+GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
+    obligation: Mandatory
+    excel_required: true
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    choices_file: choices/service_fiscal_yr.yaml
+
+  # 4.?
+  - datastore_id: channel
+    label:
+      en: Service Standard Channel
+      fr: 
+    description:
+      en: "Identifies which service channel the service standard applies to"
+      fr: 
+    format_type: Controlled List
+    occurrence: Multiple
+    datastore_type: _text
+    choices:
+      online:
+        en: Online
+        fr: En ligne
+      tel:
+        en: Telephone
+        fr: Téléphone
+      person:
+        en: In-Person
+        fr: En personne
+      email:
+        en: Email
+        fr: Courriel
+      fax:
+        en: Fax
+        fr: Télécopieur
+      post:
+        en: Postal Mail
+        fr: Courrier postal
+      other:
+        en: Other
+        fr: Autre
+      none:
+        en: None
+        fr: Aucune des réponses
+
+  # 4.? (new field)
+  - datastore_id: standard_channel_comment_en
+    label:
+      en: Comments on the service standard channel (English)
+      fr: #TODO (anglais)
+    description:
+      en: "Comments related to the service standard channel"
+      fr: 
+    obligation: Optional
+    format_type: Free text
+    occurrence: Single
+    datastore_type: text
+
+  # 4.? (new field)
+  - datastore_id: standard_channel_comment_fr
+    label:
+      en: Comments on the service standard channel (French)
+      fr: 
+    description:
+      en: "Comments related to the service standard channel"
+      fr: 
+    obligation: Optional
+    format_type: Free text
+    occurrence: Single
+    datastore_type: text
+
+  # 4.? (new field)
+  - datastore_id: standard_comment_en
+    label:
+      en: Comments on the service standard in general (English)
+      fr: #TODO (anglais)
+    description:
+      en: "Comments related to the service standard in general"
+      fr: 
+    obligation: Optional
+    format_type: Free text
+    occurrence: Single
+    datastore_type: text
+
+  # 4.? (new field)
+  - datastore_id: standard_comment_fr
+    label:
+      en: Comments on the service standard in general (French)
+      fr: 
+    description:
+      en: "Comments related to the service standard in general"
+      fr: 
+    obligation: Optional
+    format_type: Free text
+    occurrence: Single
+    datastore_type: text
+
+  # 4.9
+  - datastore_id: realtime_result_url_en
+    label:
+      en: URL to Real-Time Performance Results (English)
+      fr: URL aux résultats de rendement en temps réel (anglais)
+    description:
+      en: "Identifies the departmental webpage where the real-time performance results for a service are published. 
+    • If data is not available, please indicate that there is no data (“ND”)."
+      fr: "Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »)."
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+
+  # 4.10
+  - datastore_id: realtime_result_url_fr
+    label:
+      en: URL to Real-Time Performance Results (French)
+      fr: URL aux résultats de rendement en temps réel (français)
+    description:
+      en: |
+        Identifies the departmental webpage where the real-time performance results for a service are published.
+        • If data is not available, please indicate that there is no data (“ND”).
+      fr: "Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »)."
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+
+
+  
   - datastore_id: record_created
     label: Record Creation Time
     import_template_include: false
