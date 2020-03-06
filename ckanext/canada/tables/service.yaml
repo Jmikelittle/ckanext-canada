@@ -374,6 +374,29 @@ resources:
         en: Environmental
         fr: Environnemental
 
+  # 3.18 (New Field)
+  - datastore_id: info_service
+    label:
+      en: Information Service
+      fr: Service d'information
+    description:
+      en: Identifies whether a service exists solely to provide information to clients.
+      fr: #TODO
+    obligation: Mandatory
+    excel_required: true
+    format_type: Controlled List
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    excel_full_text_choices: true
+    choices:
+      Y:
+        en: "Yes"
+        fr: Oui
+      N:
+        en: "No"
+        fr: Non
+
   # 3.18 (was user_fee)
   - datastore_id: service_fee
     label:
@@ -448,6 +471,43 @@ resources:
       NA:
         en: N/A (not a service to individuals)
         fr: S.O. (n’est pas un service aux particuliers)
+
+  # 3.34
+  - datastore_id: service_channels
+    label:
+      en: Service Delivery Channels
+      fr: #TODO
+    description:
+      en: Identifies the channels by which services are delivered to client groups.
+      fr: #TODO
+    format_type: Controlled List
+    occurrence: Multiple
+    datastore_type: _text
+    choices:
+      onl:
+        en: Online
+        fr: En ligne
+      tel:
+        en: Telephone
+        fr: Téléphone
+      person:
+        en: In-Person
+        fr: En personne
+      eml:
+        en: Email
+        fr: Courriel
+      fax:
+        en: Fax
+        fr: Télécopieur
+      post:
+        en: Postal Mail
+        fr: Courrier postal
+      oth:
+        en: Other
+        fr: Autre
+      non:
+        en: None
+        fr: Aucune des réponses
 
   # 3.21 (was volumes_per_channel_online)
   - datastore_id: online_applications
