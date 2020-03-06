@@ -192,7 +192,7 @@ resources:
       reg:
         en: Regulatory Compliance and Enforcement
         fr: Conformité aux règlements et application des règlements
-      resource:
+      res:
         en: Resources
         fr: Ressources
       prop:
@@ -218,16 +218,16 @@ resources:
     datastore_type: text
     excel_full_text_choices: true
     choices:
-      priority:
+      prior:
         en: Priority Service
         fr: Service prioritaire
-      #critical: ## Security would like us to remove this field. 
+      #crit: ## Security would like us to remove this field. 
         #en: Critical Service
         #fr: Service critique
-      essential:
+      essent:
         en: Essential Service
         fr: Service essentiel
-      none:
+      non:
         en: None of the above
         fr: Aucun des éléments ci-dessus
 
@@ -318,7 +318,7 @@ resources:
     excel_required: true
     format_type: Free text
     validation: This field must not be empty
-    occurrence: Single
+    occurrence: Multiple
     datastore_type: text
 
  # 3.16 (New field)
@@ -352,25 +352,25 @@ resources:
     datastore_type: _text
     excel_column_width: 21
     choices:
-      persons:
+      per:
         en: Persons
         fr: Particuliers
-      non_profit:
-        en: Non Profit Institutions and Organizations
+      non_pro:
+        en: Non-Profit Institutions and Organizations
         fr: Institutions et organismes sans but lucratif
-      economic:
+      econom:
         en: Economic Segments (Businesses)
         fr: Segments économiques (entreprises)
-      foreign:
+      for:
         en: Foreign Entities
         fr: Entités étrangères
       PTC:
         en: Provinces, Territories or Communities
         fr: Provinces, territoires et collectivités
-      internal_gov:
+      intern_gov:
         en: Internal to Government
         fr: Interne au gouvernement
-      environmental:
+      enviro:
         en: Environmental
         fr: Environnemental
 
@@ -804,7 +804,7 @@ resources:
     occurrence: Multiple
     datastore_type: _text
     choices:
-      online:
+      onl:
         en: Online
         fr: En ligne
       tel:
@@ -813,7 +813,7 @@ resources:
       person:
         en: In-Person
         fr: En personne
-      email:
+      eml:
         en: Email
         fr: Courriel
       fax:
@@ -822,10 +822,10 @@ resources:
       post:
         en: Postal Mail
         fr: Courrier postal
-      other:
+      oth:
         en: Other
         fr: Autre
-      none:
+      non:
         en: None
         fr: Aucune des réponses
 
@@ -1119,16 +1119,16 @@ resources:
     occurrence: Multiple
     datastore_type: _text
     choices:
-      timeliness:
+      time:
         en: Timeliness
-        fr: Accès à l’information
-      accuracy:
-        en: Accuracy
         fr: Temps opportun
-      access:
-        en: Access
+      accur:
+        en: Accuracy
         fr: Exactitude
-      other:
+      acces:
+        en: Access
+        fr: Accès à l’information
+      oth:
         en: Other
         fr: Autre
 
@@ -1252,7 +1252,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Multiple
     datastore_type: _text
     choices:
-      online:
+      onl:
         en: Online
         fr: En ligne
       tel:
@@ -1261,7 +1261,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
       person:
         en: In-Person
         fr: En personne
-      email:
+      eml:
         en: Email
         fr: Courriel
       fax:
@@ -1270,10 +1270,10 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
       post:
         en: Postal Mail
         fr: Courrier postal
-      other:
+      oth:
         en: Other
         fr: Autre
-      none:
+      non:
         en: None
         fr: Aucune des réponses
 
