@@ -78,7 +78,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.?
+  # 3.5
   - datastore_id: department_name_en
     label:
       en: Department Name (English)
@@ -93,7 +93,7 @@ resources:
     occurrence: Single
     datastore_type: text
  
- # 3.?
+ # 3.6
   - datastore_id: department_name_fr
     label:
       en: Department Name (French)
@@ -108,7 +108,7 @@ resources:
     occurrence: Single
     datastore_type: text
     
-  # 3.5
+  # 3.7
   - datastore_id: external_internal
     label:
       en: External Service or Internal Enterprise Service
@@ -134,7 +134,7 @@ resources:
         en: Internal Enterprise Service
         fr: Service interne intégré
 
-  # 3.6
+  # 3.8
   - datastore_id: service_type
     label:
       en: Service Type
@@ -202,7 +202,7 @@ resources:
         en: Rule Making
         fr: Établissement de règles
 
-  # 3.7
+  # 3.9
   - datastore_id: special_designations
     label:
       en: Special Designations
@@ -221,9 +221,9 @@ resources:
       prior:
         en: Priority Service
         fr: Service prioritaire
-      #crit: ## Security would like us to remove this field. 
-        #en: Critical Service
-        #fr: Service critique
+      crit:  
+        en: Critical Service
+        fr: Service critique
       essent:
         en: Essential Service
         fr: Service essentiel
@@ -231,7 +231,7 @@ resources:
         en: None of the above
         fr: Aucun des éléments ci-dessus
 
-  # 3.8
+  # 3.10
   - datastore_id: service_description_en
     label:
       en: Service Description (English)
@@ -246,7 +246,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.9
+  # 3.11
   - datastore_id: service_description_fr
     label:
       en: Service Description (French)
@@ -397,7 +397,7 @@ resources:
         en: "No"
         fr: Non
 
-  # 3.18 (was user_fee)
+  # 3.19 (was user_fee)
   - datastore_id: service_fee
     label:
       en: Service Fees
@@ -420,7 +420,7 @@ resources:
         en: "No"
         fr: Non
 
-  # 3.19
+  # 3.20
   - datastore_id: cra_business_number
     label:
       en: Use of CRA Business Number
@@ -446,7 +446,7 @@ resources:
         en: N/A (not a service to businesses)
         fr: S.O. (N’est pas un service aux entreprises)
 
-  # 3.20 (new field)
+  # 3.21 (new field)
   - datastore_id: use_of_sin
     label:
       en: Use of Social Insurance Number
@@ -472,7 +472,7 @@ resources:
         en: N/A (not a service to individuals)
         fr: S.O. (n’est pas un service aux particuliers)
 
-  # 3.34
+  # 3.22
   - datastore_id: service_channels
     label:
       en: Service Delivery Channels
@@ -509,7 +509,7 @@ resources:
         en: None
         fr: Aucune des réponses
 
-  # 3.21 (was volumes_per_channel_online)
+  # 3.23 (was volumes_per_channel_online)
   - datastore_id: online_applications
     label:
       en: Number of Applications Submitted Online
@@ -534,7 +534,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.22 (new field)
+  # 3.24 (new field)
   - datastore_id: web_visits_info_service
     label:
       en: Number of Website Visits (Information-Based Services)
@@ -560,7 +560,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.23 (was volumes_per_channel_telephone)
+  # 3.25 (was volumes_per_channel_telephone)
   - datastore_id: calls_received
     label:
       en: Number of Telephone Enquiries Received
@@ -585,7 +585,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.24 (was volumes_per_channel_in_person)
+  # 3.26 (was volumes_per_channel_in_person)
   - datastore_id: in_person_applications
     label:
       en: Number of Applications Submitted In-Person
@@ -635,7 +635,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.? (New Field)
+  # 3.28 (New Field)
   - datastore_id: other_applications
     label:
       en: Number of Applications Submitted via other channels, such as email or fax
@@ -660,7 +660,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.28
+  # 3.29
   - datastore_id: e_registration
     label:
       en: "E-enabled Services: Account Registration/Enrollment"
@@ -692,7 +692,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.29
+  # 3.30
   - datastore_id: e_authentication
     label:
       en: "E-enabled Services: Authentication"
@@ -724,7 +724,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.30
+  # 3.31
   - datastore_id: e_application
     label:
       en: "E-enabled Services: Application"
@@ -756,7 +756,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.31
+  # 3.32
   - datastore_id: e_decision
     label:
       en: "E-enabled Services: Decision"
@@ -788,7 +788,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.32
+  # 3.33
   - datastore_id: e_issuance
     label:
       en: "E-enabled Services: Issuance"
@@ -820,7 +820,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.33
+  # 3.34
   - datastore_id: e_feedback
     label:
       en: "E-enabled Services: Issue Resolution and Feedback"
@@ -852,7 +852,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.34
+  # 3.35
   - datastore_id: client_feedback
     label:
       en: "Client Given Opportunity to Provide Feedback on Level of Satisfaction with this Service by Channel"
@@ -889,7 +889,7 @@ resources:
         en: None
         fr: Aucune des réponses
 
-  # 3.35 (new field)
+  # 3.36 (new field)
   - datastore_id: special_remarks_en
     label:
       en: Special Remarks (English)
@@ -902,7 +902,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.36 (new field)
+  # 3.37 (new field)
   - datastore_id: special_remarks_fr
     label:
       en: Special Remarks (French)
@@ -1061,6 +1061,7 @@ resources:
   resource_name: service-std
   fields:
 
+  # 4.1
   - datastore_id: fiscal_yr
     label:
       en: Fiscal Year
@@ -1075,6 +1076,7 @@ resources:
     datastore_type: text
     choices_file: choices/service_fiscal_yr.yaml
 
+  # 4.2
   - datastore_id: service_id
     label:
       en: Service ID Number
@@ -1089,7 +1091,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.1
+  # 4.3
   - datastore_id: service_std_id
     label:
       en: Service Standard ID
@@ -1104,7 +1106,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.2
+  # 4.4
   - datastore_id: service_std_en
     label:
       en: Service Standard (English)
@@ -1119,7 +1121,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.3
+  # 4.5
   - datastore_id: service_std_fr
     label:
       en: Service Standard (French)
@@ -1134,7 +1136,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.4
+  # 4.6
   - datastore_id: service_std_url_en
     label:
       en: URL to Service Standards and Targets (English)
@@ -1149,7 +1151,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.5
+  # 4.7
   - datastore_id: service_std_url_fr
     label:
       en: URL to Service Standards and Targets (French)
@@ -1164,7 +1166,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.6
+  # 4.8
   - datastore_id: service_std_type
     label:
       en: Service Standard Type
@@ -1192,7 +1194,7 @@ resources:
         en: Other
         fr: Autre
 
-  # 4.?
+  # 4.9
   - datastore_id: target_type
     label:
       en: Target Type
@@ -1214,7 +1216,7 @@ resources:
         en: Other type of target
         fr: 
         
-  # 4.7
+  # 4.10
   - datastore_id: service_std_target
     label:
       en: Service Standard Target
@@ -1266,7 +1268,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.? (New entry potentially)
+  # 4.13 (New entry potentially)
   - datastore_id: performance
     label:
       en: Performance
@@ -1282,7 +1284,8 @@ resources:
     validation: This field must not be empty
     occurrence: Single
     datastore_type: text
-  # 4.8
+
+  # 4.14
   - datastore_id: gcss_tool_fiscal_yr
     label:
       en: Last Service Standard Review Using GC Service Standard Assessment Tool
@@ -1300,7 +1303,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     datastore_type: text
     choices_file: choices/service_fiscal_yr.yaml
 
-  # 4.?
+  # 4.15
   - datastore_id: channel
     label:
       en: Service Standard Channel
@@ -1337,7 +1340,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
         en: None
         fr: Aucune des réponses
 
-  # 4.? (new field)
+  # 4.16 (new field)
   - datastore_id: standard_channel_comment_en
     label:
       en: Comments on the service standard channel (English)
@@ -1350,7 +1353,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.? (new field)
+  # 4.17 (new field)
   - datastore_id: standard_channel_comment_fr
     label:
       en: Comments on the service standard channel (French)
@@ -1363,7 +1366,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.? (new field)
+  # 4.18 (new field)
   - datastore_id: standard_comment_en
     label:
       en: Comments on the service standard in general (English)
@@ -1376,7 +1379,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.? (new field)
+  # 4.19 (new field)
   - datastore_id: standard_comment_fr
     label:
       en: Comments on the service standard in general (French)
@@ -1389,7 +1392,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.9
+  # 4.20
   - datastore_id: realtime_result_url_en
     label:
       en: URL to Real-Time Performance Results (English)
@@ -1405,7 +1408,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.10
+  # 4.21
   - datastore_id: realtime_result_url_fr
     label:
       en: URL to Real-Time Performance Results (French)
