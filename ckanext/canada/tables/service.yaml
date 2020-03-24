@@ -269,7 +269,7 @@ resources:
     description:
       en: Identifies the departmental webpage where the service is described and/or accessed.
       fr: Indique la page Web du ministère où le service est décrit et/ou peut être lancé.
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     format_type: Free text
     validation: This field must not be empty
@@ -284,7 +284,7 @@ resources:
     description:
       en: Identifies the departmental webpage where the service is described and/or accessed.
       fr: Indique la page Web du ministère où le service est décrit et/ou peut être lancé.
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     format_type: Free text
     validation: This field must not be empty
@@ -314,7 +314,7 @@ resources:
     description:
       en: Identifies the name of the program under which the service is delivered.
       fr: Indique le nom du programme sous lequel le service est offert.
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     format_type: Free text
     validation: This field must not be empty
@@ -329,7 +329,7 @@ resources:
     description:
       en: Identifies the fiscal year when the most recent GBA+ review was completed
       fr: #TODO
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     validation: 
     occurrence: Single
@@ -1144,7 +1144,7 @@ resources:
     description:
       en: Identifies the departmental webpage (Canada.ca) where the service standards and targets are published.
       fr: Indique la page Web ministérielle (Canada.ca) où les normes relatives aux services et les cibles sont publiées.
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     format_type: Free text
     validation: This field must not be empty
@@ -1159,7 +1159,7 @@ resources:
     description:
       en: Identifies the departmental webpage (Canada.ca) where the service standards and targets are published.
       fr: Indique la page Web ministérielle (Canada.ca) où les normes relatives aux services et les cibles sont publiées.
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     format_type: Free text
     validation: This field must not be empty
@@ -1278,7 +1278,7 @@ resources:
         Identifies the result achieved for this service standard. This is the volume_meeting_target divided by the total_volume
       fr: |
         #TODO 
-    obligation: Mandatory
+    obligation: Optional
     excel_required: false
     format_type: Numeric or ND
     validation: This field must not be empty
@@ -1296,7 +1296,7 @@ resources:
 pour la dernière fois à l’aide de l’outil d’évaluation des normes relatives aux 
 services du GC accessible sur la page GCpédia de la Politique sur les services du 
 GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     validation: This field must not be empty
     occurrence: Single
@@ -1401,7 +1401,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
       en: "Identifies the departmental webpage where the real-time performance results for a service are published. 
     • If data is not available, please indicate that there is no data (“ND”)."
       fr: "Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »)."
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     format_type: Free text
     validation: This field must not be empty
@@ -1418,7 +1418,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
         Identifies the departmental webpage where the real-time performance results for a service are published.
         • If data is not available, please indicate that there is no data (“ND”).
       fr: "Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »)."
-    obligation: Mandatory
+    obligation: Optional
     excel_required: true
     format_type: Free text
     validation: This field must not be empty
