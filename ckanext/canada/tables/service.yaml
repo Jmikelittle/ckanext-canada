@@ -36,7 +36,7 @@ resources:
   - datastore_id: service_id
     label:
       en: Service ID Number
-      fr: Numéro d'identification du service
+      fr: "Numéro d’identification du service"
     description:
       en: The unique number assigned by the department to a service in the inventory to make it easier to refer to specific services.
       fr: Le numéro unique attribué par le ministère ou l’organisme à un service dans le répertoire afin de faciliter le référencement à des services précis. 
@@ -85,7 +85,7 @@ resources:
       fr: Nom du ministère (en anglais)
     description:
       en: Identifies the applied title of the department or agency.
-      fr: .
+      fr: "Identifie le titre d’usage du ministère ou de l’organisme"
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -100,7 +100,7 @@ resources:
       fr: Nom de ministère (en français)
     description:
       en: Identifies the applied title of the department or agency.
-      fr: .
+      fr: "Identifie le titre d’usage du ministère ou de l’organisme"
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -209,7 +209,7 @@ resources:
       fr: Désignations spéciales
     description:
       en: Identifies the service as a priority service, a mission critical service and/or an essential service. These designations are not mutually exclusive and more than one designation can be listed.
-      fr: Identifie le service comme un service prioritaire, un service critique à la mission et / ou un service essentiel. Ces désignations ne sont pas mutuellement exclusives et plus d'une désignation être indiquée.
+      fr: Identifie le service comme un service prioritaire, un service critique à la mission et / ou un service essentiel. Ces désignations ne sont pas mutuellement exclusives et plus d’une désignation être indiquée.
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
@@ -325,10 +325,10 @@ resources:
   - datastore_id: last_GBA
     label:
       en: Year of last GBA+ 
-      fr: #TODO
+      fr: Année de la dernière ACS+
     description:
       en: Identifies the fiscal year when the most recent GBA+ review was completed
-      fr: #TODO
+      fr: Identifie l’exercice lors duquel la plus récente ACS+ a été menée
     obligation: Optional
     excel_required: true
     validation: 
@@ -378,10 +378,10 @@ resources:
   - datastore_id: info_service
     label:
       en: Information Service
-      fr: Service d'information
+      fr: Service d’information
     description:
       en: Identifies whether a service exists solely to provide information to clients.
-      fr: #TODO
+      fr: Déterminer si un service existe seulement pour fournir des renseignements aux clients.
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
@@ -426,8 +426,8 @@ resources:
       en: Use of CRA Business Number
       fr: Utilisation du numéro d’entreprise de l’ARC
     description:
-      en: Identifies whether the Canada Revenue Agency's Business Number is used in the delivery of the service if the service is delivered to a business.
-      fr: Identifie si le numéro d'entreprise de l'Agence du Revenu du Canada est utilisé dans la prestation du service, si le service est livré à une entreprise.
+      en: "Identifies whether the Canada Revenue Agency's Business Number is used in the delivery of the service if the service is delivered to a business."
+      fr: "Identifie si le numéro d’entreprise de l’Agence du Revenu du Canada est utilisé dans la prestation du service, si le service est livré à une entreprise."
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
@@ -476,10 +476,10 @@ resources:
   - datastore_id: service_channels
     label:
       en: Service Delivery Channels
-      fr: #TODO
+      fr: mode de prestation de service
     description:
       en: Identifies the channels by which services are delivered to client groups.
-      fr: #TODO
+      fr: Identifie les caneau par lesquels les services sont offerts aux groupes de clients.
     format_type: Controlled List
     occurrence: Multiple
     datastore_type: _text
@@ -638,8 +638,8 @@ resources:
   # 3.28 (New Field)
   - datastore_id: other_applications
     label:
-      en: Number of Applications Submitted via other channels, such as email or fax
-      fr: Nombre de demandes soumises par les autre modes de prestations, par example courriel ou 
+      en: "Number of Applications Submitted via other channels, such as email or fax"
+      fr: "Nombre de demandes soumises par les autre modes de prestations, par example courriel ou télécopier"
     description:
       en: |
         Identifies the number of applications received through other channels in a fiscal year for each service.
@@ -1198,10 +1198,10 @@ resources:
   - datastore_id: target_type
     label:
       en: Target Type
-      fr: 
+      fr: Type de cible   
     description:
       en: Identifies the type of service standard target.
-      fr: 
+      fr: identifie le type de cible de la norme de service.
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
@@ -1211,10 +1211,10 @@ resources:
     choices:
       percentage:
         en: Percentage of outcomes
-        fr: 
+        fr: Pourcentage des résultats
       other_type:
         en: Other type of target
-        fr: 
+        fr: Autre type de cible
         
   # 4.10
   - datastore_id: service_std_target
@@ -1272,12 +1272,12 @@ resources:
   - datastore_id: performance
     label:
       en: Performance
-      fr: 
+      fr: Performance
     description:
       en: |
         Identifies the result achieved for this service standard. This is the volume_meeting_target divided by the total_volume
       fr: |
-        #TODO 
+        Identifie les résultats atteints pour cette norme de service. Il s’agit du volume_meeting_target divisé par le total_volume
     obligation: Optional
     excel_required: false
     format_type: Numeric or ND
@@ -1307,10 +1307,10 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
   - datastore_id: channel
     label:
       en: Service Standard Channel
-      fr: 
+      fr: Mode de prestation de la norme de service
     description:
       en: "Identifies which service channel the service standard applies to"
-      fr: 
+      fr: Identifie à quelle mode de prestation de service la norme de service est appliquée
     format_type: Controlled List
     occurrence: Multiple
     datastore_type: _text
@@ -1344,10 +1344,10 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
   - datastore_id: standard_channel_comment_en
     label:
       en: Comments on the service standard channel (English)
-      fr: #TODO (anglais)
+      fr: Commentaires sur le mode de prestation de la norme de service (anglais)
     description:
       en: "Comments related to the service standard channel"
-      fr: 
+      fr: Commentaires en lien au mode de prestation de la norme de service
     obligation: Optional
     format_type: Free text
     occurrence: Single
@@ -1357,10 +1357,10 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
   - datastore_id: standard_channel_comment_fr
     label:
       en: Comments on the service standard channel (French)
-      fr: 
+      fr: Commentaires sur le mode de prestation de la norme de service (Francais)
     description:
       en: "Comments related to the service standard channel"
-      fr: 
+      fr: Commentaires en lien au mode de prestation de la norme de service
     obligation: Optional
     format_type: Free text
     occurrence: Single
@@ -1370,10 +1370,10 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
   - datastore_id: standard_comment_en
     label:
       en: Comments on the service standard in general (English)
-      fr: #TODO (anglais)
+      fr: Commentaires sur la norme de service en general (anglais)
     description:
       en: "Comments related to the service standard in general"
-      fr: 
+      fr: Commentaires en lien à la norme de service en general
     obligation: Optional
     format_type: Free text
     occurrence: Single
@@ -1383,10 +1383,10 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
   - datastore_id: standard_comment_fr
     label:
       en: Comments on the service standard in general (French)
-      fr: 
+      fr: Commentaires sur la norme de service en general (Francais)
     description:
       en: "Comments related to the service standard in general"
-      fr: 
+      fr: Commentaires en lien à la norme de service en general
     obligation: Optional
     format_type: Free text
     occurrence: Single
