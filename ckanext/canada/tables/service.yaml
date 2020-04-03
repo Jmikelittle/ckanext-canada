@@ -471,6 +471,9 @@ resources:
       NA:
         en: N/A (not a service to individuals)
         fr: S.O. (n’est pas un service aux particuliers)
+      ND:
+        en: (data not available)
+        fr: (Aucune donnée n’est disponible)
 
   # 3.22
   - datastore_id: service_channels
