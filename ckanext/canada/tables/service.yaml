@@ -1428,7 +1428,35 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-
+  # 4.22
+  - datastore_id: department_name_en
+    label:
+      en: Department Name (English)
+      fr: Nom du ministère (en anglais)
+    description:
+      en: Identifies the applied title of the department or agency.
+      fr: Identifie le titre d’usage du ministère ou de l’organisme
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+ 
+ # 4.23
+  - datastore_id: department_name_fr
+    label:
+      en: Department Name (French)
+      fr: Nom de ministère (en français)
+    description:
+      en: Identifies the applied title of the department or agency.
+      fr: Identifie le titre d’usage du ministère ou de l’organisme
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
   
   - datastore_id: record_created
     label: Record Creation Time
