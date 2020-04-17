@@ -1093,8 +1093,39 @@ resources:
     validation: This field must not be empty
     occurrence: Single
     datastore_type: text
-
+ 
   # 4.3
+  - datastore_id: service_name_en
+    label:
+      en: Service Name (English)
+      fr: Nom du service (en anglais)
+    description:
+      en: Identifies the official name of the service.
+      fr: Indique le nom officiel du service.
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    excel_column_width: 28
+
+  # 4.4
+  - datastore_id: service_name_fr
+    label:
+      en: Service Name (French)
+      fr: Nom du service (en français)
+    description:
+      en: Identifies the official name of the service.
+      fr: Indique le nom officiel du service.
+    obligation: Mandatory
+    excel_required: true
+    format_type: Free text
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+ 
+  # 4.5
   - datastore_id: service_std_id
     label:
       en: Service Standard ID
@@ -1109,7 +1140,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.4
+  # 4.6
   - datastore_id: service_std_en
     label:
       en: Service Standard (English)
@@ -1124,7 +1155,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.5
+  # 4.7
   - datastore_id: service_std_fr
     label:
       en: Service Standard (French)
@@ -1139,7 +1170,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.6
+  # 4.8
   - datastore_id: service_std_url_en
     label:
       en: URL to Service Standards and Targets (English)
@@ -1154,7 +1185,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.7
+  # 4.9
   - datastore_id: service_std_url_fr
     label:
       en: URL to Service Standards and Targets (French)
@@ -1169,7 +1200,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.8
+  # 4.10
   - datastore_id: service_std_type
     label:
       en: Service Standard Type
@@ -1197,7 +1228,7 @@ resources:
         en: Other
         fr: Autre
 
-  # 4.9
+  # 4.11
   - datastore_id: target_type
     label:
       en: Target Type
@@ -1219,7 +1250,7 @@ resources:
         en: Other type of target
         fr: Autre type de cible
         
-  # 4.10
+  # 4.12
   - datastore_id: service_std_target
     label:
       en: Service Standard Target
@@ -1233,7 +1264,7 @@ resources:
     occurrence: Single
     datastore_type: numeric
 
-# 4.11 (new field, replaces quarterly reports)
+# 4.13 (new field, replaces quarterly reports)
   - datastore_id: volume_meeting_target
     label:
       en: Business Volume That Met Service Standard Target
@@ -1252,7 +1283,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.12 (new field, replaces quarterly reports)
+  # 4.14 (new field, replaces quarterly reports)
   - datastore_id: total_volume
     label:
       en: Total Volume
@@ -1271,7 +1302,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.13 (New entry potentially)
+  # 4.15 (New entry potentially)
   - datastore_id: performance
     label:
       en: Performance
@@ -1288,17 +1319,14 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 4.14
+  # 4.16
   - datastore_id: gcss_tool_fiscal_yr
     label:
       en: Last Service Standard Review Using GC Service Standard Assessment Tool
       fr: Dernier examen de la norme relative aux services à l’aide de l’outil d’évaluation des normes relatives aux services du GC
     description:
       en: "Identifies the fiscal year in which the service standard was last reviewed using the GC Service Standard Assessment Tool available on the GC Service Policy GCPedia page. ( http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance )"
-      fr: "Indique l’exercice au cours duquel la norme relative aux services a été examinée 
-pour la dernière fois à l’aide de l’outil d’évaluation des normes relatives aux 
-services du GC accessible sur la page GCpédia de la Politique sur les services du 
-GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
+      fr: "Indique l’exercice au cours duquel la norme relative aux services a été examinée pour la dernière fois à l’aide de l’outil d’évaluation des normes relatives aux services du GC accessible sur la page GCpédia de la Politique sur les services du GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     obligation: Optional
     excel_required: true
     validation: This field must not be empty
@@ -1306,7 +1334,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     datastore_type: text
     choices_file: choices/service_fiscal_yr.yaml
 
-  # 4.15
+  # 4.17
   - datastore_id: channel
     label:
       en: Service Standard Channel
@@ -1343,7 +1371,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
         en: None
         fr: Aucune des réponses
 
-  # 4.16 (new field)
+  # 4.18 (new field)
   - datastore_id: standard_channel_comment_en
     label:
       en: Comments on the service standard channel (English)
@@ -1356,7 +1384,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.17 (new field)
+  # 4.19 (new field)
   - datastore_id: standard_channel_comment_fr
     label:
       en: Comments on the service standard channel (French)
@@ -1369,7 +1397,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.18 (new field)
+  # 4.20 (new field)
   - datastore_id: standard_comment_en
     label:
       en: Comments on the service standard in general (English)
@@ -1382,7 +1410,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.19 (new field)
+  # 4.21 (new field)
   - datastore_id: standard_comment_fr
     label:
       en: Comments on the service standard in general (French)
@@ -1395,7 +1423,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.20
+  # 4.22
   - datastore_id: realtime_result_url_en
     label:
       en: URL to Real-Time Performance Results (English)
@@ -1411,7 +1439,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.21
+  # 4.23
   - datastore_id: realtime_result_url_fr
     label:
       en: URL to Real-Time Performance Results (French)
@@ -1428,7 +1456,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
 
-  # 4.22
+  # 4.24
   - datastore_id: department_name_en
     label:
       en: Department Name (English)
@@ -1443,7 +1471,7 @@ GC. (http://www.gcpedia.gc.ca/wiki/GC_Service_Policy_Agenda#Guidance)"
     occurrence: Single
     datastore_type: text
  
- # 4.23
+ # 4.25
   - datastore_id: department_name_fr
     label:
       en: Department Name (French)
