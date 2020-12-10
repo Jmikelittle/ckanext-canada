@@ -511,7 +511,25 @@ resources:
       non:
         en: None
         fr: Aucune des réponses
-
+ 
+ 3.x (New Field)
+  - datastore_id: telephone_applications
+    label:
+      en: "Number of Applications Submitted via telephone"
+      fr: "Nombre de demandes soumises par téléphoniques"
+    description:
+      en: |
+        Identifies the number of applications received over the telephone.
+      fr: |
+        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
+    obligation: Mandatory
+    excel_required: true
+    excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
+    format_type: Numeric, NA or ND
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    
   # 3.23 (was volumes_per_channel_online)
   - datastore_id: online_applications
     label:
