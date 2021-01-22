@@ -511,33 +511,8 @@ resources:
       non:
         en: None
         fr: Aucune des réponses
-
-  # 3.23 (was volumes_per_channel_online)
-  - datastore_id: online_applications
-    label:
-      en: Number of Applications Submitted Online
-      fr: Nombre de demandes soumises en ligne
-    description:
-      en: |
-        Identifies the number of applications submitted in a fiscal year for the online channel.
-
-        Notes:
-        • If the service is not offered online, please indicate that this field is not applicable (NA).
-        • If data is not available, please indicate that there is no data (ND).
-      fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : 
-        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
-    obligation: Mandatory
-    excel_required: true
-    excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
-    format_type: Numeric, NA or ND
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
-  # 3.24 (new field)
+   
+  # 3.23 (new field)
   - datastore_id: web_visits_info_service
     label:
       en: Number of Website Visits (Information-Based Services)
@@ -545,16 +520,8 @@ resources:
     description:
       en: |
         Identifies the number of website visits in a fiscal year for obtaining information-based services.
-
-        Notes:
-        • If the service is not offered online, please indicate that this field is not applicable (NA).
-        • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        
-        Remarque : 
-        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -563,7 +530,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.25 (was volumes_per_channel_telephone)
+  # 3.24 (was volumes_per_channel_telephone)
   - datastore_id: calls_received
     label:
       en: Number of Telephone Enquiries Received
@@ -588,7 +555,50 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.26 (was volumes_per_channel_in_person)
+ # 3.25 (was volumes_per_channel_online)
+  - datastore_id: online_applications
+    label:
+      en: Number of Applications Submitted Online
+      fr: Nombre de demandes soumises en ligne
+    description:
+      en: |
+        Identifies the number of applications submitted in a fiscal year for the online channel.
+
+        Notes:
+        • If the service is not offered online, please indicate that this field is not applicable (NA).
+        • If data is not available, please indicate that there is no data (ND).
+      fr: |
+        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
+        Remarque : 
+        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
+        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+    obligation: Mandatory
+    excel_required: true
+    excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
+    format_type: Numeric, NA or ND
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+    
+  # 3.26 (New Field)
+  - datastore_id: telephone_applications
+    label:
+      en: Number of Applications Submitted by Telephone
+      fr: Nombre de demandes soumises par téléphone
+    description:
+      en: |
+        Identifies the number of applications submitted in a fiscal year for the telephone channel.
+      fr: |
+        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
+    obligation: Mandatory
+    excel_required: true
+    excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
+    format_type: Numeric, NA or ND
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+
+  # 3.27 (was volumes_per_channel_in_person)
   - datastore_id: in_person_applications
     label:
       en: Number of Applications Submitted In-Person
@@ -613,7 +623,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.27 (was volumes_per_channel_mail)
+  # 3.28 (was volumes_per_channel_mail)
   - datastore_id: postal_mail_applications
     label:
       en: Number of Applications Submitted via Postal Mail
@@ -638,7 +648,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.28 (New Field)
+  # 3.29 (New Field)
   - datastore_id: other_applications
     label:
       en: "Number of Applications Submitted via other channels, such as email or fax"
@@ -663,7 +673,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.29
+  # 3.30
   - datastore_id: e_registration
     label:
       en: "E-enabled Services: Account Registration/Enrollment"
@@ -695,7 +705,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.30
+  # 3.31
   - datastore_id: e_authentication
     label:
       en: "E-enabled Services: Authentication"
@@ -727,7 +737,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.31
+  # 3.32
   - datastore_id: e_application
     label:
       en: "E-enabled Services: Application"
@@ -759,7 +769,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.32
+  # 3.33
   - datastore_id: e_decision
     label:
       en: "E-enabled Services: Decision"
@@ -791,7 +801,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.33
+  # 3.34
   - datastore_id: e_issuance
     label:
       en: "E-enabled Services: Issuance"
@@ -823,7 +833,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.34
+  # 3.35
   - datastore_id: e_feedback
     label:
       en: "E-enabled Services: Issue Resolution and Feedback"
@@ -855,7 +865,7 @@ resources:
         en: "N/A (This interaction point is not applicable to the service)"
         fr: "S.O. (Ce point d’interaction s’applique au service et est de nature électronique)"
 
-  # 3.35
+  # 3.36
   - datastore_id: client_feedback
     label:
       en: "Client Given Opportunity to Provide Feedback on Level of Satisfaction with this Service by Channel"
@@ -892,7 +902,7 @@ resources:
         en: None
         fr: Aucune des réponses
 
-  # 3.36 (new field)
+  # 3.37 (new field)
   - datastore_id: special_remarks_en
     label:
       en: Special Remarks (English)
@@ -905,7 +915,7 @@ resources:
     occurrence: Single
     datastore_type: text
 
-  # 3.37 (new field)
+  # 3.38 (new field)
   - datastore_id: special_remarks_fr
     label:
       en: Special Remarks (French)
