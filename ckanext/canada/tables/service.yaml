@@ -399,6 +399,9 @@ resources:
       ND:
         en: ND (Do Data)
         fr: S.O. (Aucune donnée n’est disponible)
+      NA:
+        en: N/A (not applicable)
+        fr: S.O. (n’est pas applicable)
 
   # 3.19 (was user_fee)
   - datastore_id: service_fee
