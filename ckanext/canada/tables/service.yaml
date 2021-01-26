@@ -518,24 +518,6 @@ resources:
         en: None
         fr: Aucune des réponses
    
-  # 3.23 (new field)
-  - datastore_id: web_visits_info_service
-    label:
-      en: Number of Website Visits (Information-Based Services)
-      fr: Nombre de visites sur le site Web (services d’information)
-    description:
-      en: |
-        Identifies the number of website visits in a fiscal year for obtaining information-based services.
-      fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-    obligation: Mandatory
-    excel_required: true
-    excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
-    format_type: Numeric, NA or ND
-    validation: This field must not be empty
-    occurrence: Single
-    datastore_type: text
-
   # 3.24 (was volumes_per_channel_telephone)
   - datastore_id: calls_received
     label:
@@ -560,6 +542,25 @@ resources:
     validation: This field must not be empty
     occurrence: Single
     datastore_type: text
+    
+    # 3.23 (new field)
+  - datastore_id: web_visits_info_service
+    label:
+      en: Number of Website Visits (Information-Based Services)
+      fr: Nombre de visites sur le site Web (services d’information)
+    description:
+      en: |
+        Identifies the number of website visits in a fiscal year for obtaining information-based services.
+      fr: |
+        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
+    obligation: Mandatory
+    excel_required: true
+    excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
+    format_type: Numeric, NA or ND
+    validation: This field must not be empty
+    occurrence: Single
+    datastore_type: text
+
 
  # 3.25 (was volumes_per_channel_online)
   - datastore_id: online_applications
