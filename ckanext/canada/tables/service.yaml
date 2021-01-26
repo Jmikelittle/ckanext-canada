@@ -321,7 +321,7 @@ resources:
     occurrence: Multiple
     datastore_type: text
 
- # 3.16 (New field)
+ # 3.16 
   - datastore_id: last_GBA
     label:
       en: Year of last GBA+ 
@@ -335,6 +335,34 @@ resources:
     occurrence: Single
     datastore_type: text
     choices_file: choices/service_fiscal_yr.yaml
+
+  # 3.xx (New Field)
+  - datastore_id: ident_platform
+    label:
+      en: "Digital Identity Platform"
+      fr: "Plateformes organisationnelles d’identité numérique"
+    description:
+      en: "Identifies the use of TBS mandated enterprise digital identity platforms for identity, credential and access management, where applicable."
+      fr: "Ce champ indique l’utilisation de plateformes organisationnelles d’identité numérique exigées par le SCT pour la gestion de l’identité, des justificatifs et de l’accès, s’il y a lieu."
+    format_type: Controlled List
+    occurrence: Multiple
+    datastore_type: _text
+    choices:
+      ex_auth:
+        en: "Cyber Auth/ECM - External (Public) credential and authentication (GCKey, CBS)"
+        fr: "Authentification électronique/GJE - Service de gestion des justificatifs externes (CléGC, SCJI)"
+      signin_authenti:
+        en: "Sign In Canada"
+        fr: "Authenti-Canada"
+      gcpass:
+        en: "GCpass/ICAS (Internal Centralized Authentication Service)"
+        fr: "GCpass/SICA (le Service Interne Centralizé d'Authentification)"
+      in_auth:
+        en: "ICM - Internal (GC worker) credential and authentication service (myKEY)"
+        fr: "GJI - Service de gestion des justificatifs internes (maClé)"
+      oth:
+        en: Other
+        fr: Autre
 
   # 3.17
   - datastore_id: client_target_groups
