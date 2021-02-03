@@ -36,10 +36,10 @@ resources:
   - datastore_id: service_id
     label:
       en: Service ID Number
-      fr: "Numéro d’identification du service"
+      fr: Numéro d’identification du service
     description:
-      en: The unique number assigned by the department to a service in the inventory to make it easier to refer to specific services.
-      fr: Le numéro unique attribué par le ministère ou l’organisme à un service dans le répertoire afin de faciliter le référencement à des services précis. 
+      en: The unique number assigned to a service in the inventory to make it easier to refer to specific services.
+      fr: Le numéro unique attribué à un service dans le répertoire afin de faciliter le référencement à des services précis. 
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -85,7 +85,7 @@ resources:
       fr: Nom du ministère (en anglais)
     description:
       en: Identifies the applied title of the department or agency.
-      fr: "Identifie le titre d’usage du ministère ou de l’organisme"
+      fr: Identifie le titre d’usage du ministère ou de l’organisme
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -100,7 +100,7 @@ resources:
       fr: Nom de ministère (en français)
     description:
       en: Identifies the applied title of the department or agency.
-      fr: "Identifie le titre d’usage du ministère ou de l’organisme"
+      fr: Identifie le titre d’usage du ministère ou de l’organisme
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -114,7 +114,7 @@ resources:
       en: External Service or Internal Enterprise Service
       fr: Service externe ou service intégré interne
     description:
-      en: Identifies the service as either an external service or internal enterprise service, as defined in the Policy on Service and digital.
+      en: Identifies the service as either an external service or internal enterprise service, as defined in the Policy on Service and Digital.
       fr: Identifie le service en tant que service externe ou service interne intégré au sens des définitions données dans la Politique sur les services et le numérique.
     obligation: Mandatory
     excel_required: true
@@ -339,27 +339,27 @@ resources:
   # 3.xx (New Field)
   - datastore_id: ident_platform
     label:
-      en: "Digital Identity Platform"
-      fr: "Plateformes organisationnelles d’identité numérique"
+      en: Digital Identity Platform
+      fr: Plateformes organisationnelles d’identité numérique
     description:
-      en: "Identifies the use of TBS mandated enterprise digital identity platforms for identity, credential and access management, where applicable."
-      fr: "Ce champ indique l’utilisation de plateformes organisationnelles d’identité numérique exigées par le SCT pour la gestion de l’identité, des justificatifs et de l’accès, s’il y a lieu."
+      en: Identifies the use of TBS mandated enterprise digital identity platforms for identity, credential and access management, where applicable.
+      fr: Ce champ indique l’utilisation de plateformes organisationnelles d’identité numérique exigées par le SCT pour la gestion de l’identité, des justificatifs et de l’accès, s’il y a lieu.
     format_type: Controlled List
     occurrence: Multiple
     datastore_type: _text
     choices:
       ex_auth:
-        en: "Cyber Auth/ECM - External (Public) credential and authentication (GCKey, CBS)"
-        fr: "Authentification électronique/GJE - Service de gestion des justificatifs externes (CléGC, SCJI)"
+        en: Cyber Auth/ECM - External (Public) credential and authentication (GCKey, CBS)
+        fr: Authentification électronique/GJE - Service de gestion des justificatifs externes (CléGC, SCJI)
       signin_authenti:
-        en: "Sign In Canada"
-        fr: "Authenti-Canada"
+        en: Sign In Canada
+        fr: Authenti-Canada
       gcpass:
-        en: "GCpass/ICAS (Internal Centralized Authentication Service)"
-        fr: "GCpass/SICA (le Service Interne Centralizé d'Authentification)"
+        en: GCpass/ICAS (Internal Centralized Authentication Service)
+        fr: GCpass/SICA (le Service Interne Centralizé d'Authentification)
       in_auth:
-        en: "ICM - Internal (GC worker) credential and authentication service (myKEY)"
-        fr: "GJI - Service de gestion des justificatifs internes (maClé)"
+        en: ICM - Internal (GC worker) credential and authentication service (myKEY)
+        fr: GJI - Service de gestion des justificatifs internes (maClé)
       oth:
         en: Other
         fr: Autre
@@ -370,8 +370,8 @@ resources:
       en: Client/Target Groups
       fr: Clients/groupes cibles
     description:
-      en: "Identifies the clients or target groups of the service.  Note: Should you require further clarification with regard to these categories, please consult the Standard on Tagging, in the Policy on Results."
-      fr: "Identifie les clients ou les groupes de services cibles. Remarque : Pour obtenir d’autres éclaircissements relativement à ces catégories, veuillez consulter la Norme sur l’étiquetage prévue dans la Politique sur les résultats."
+      en: Identifies the clients or target groups of the service
+      fr: Identifie les clients ou les groupes de services cibles.
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
@@ -419,13 +419,13 @@ resources:
     excel_full_text_choices: true
     choices:
       Y:
-        en: "Yes"
+        en: Yes
         fr: Oui
       N:
-        en: "No"
+        en: No
         fr: Non
       ND:
-        en: ND (Do Data)
+        en: ND (No Data)
         fr: S.O. (Aucune donnée n’est disponible)
       NA:
         en: N/A (not applicable)
@@ -448,10 +448,10 @@ resources:
     excel_full_text_choices: true
     choices:
       Y:
-        en: "Yes"
+        en: Yes
         fr: Oui
       N:
-        en: "No"
+        en: No
         fr: Non
 
   # 3.20
@@ -460,8 +460,8 @@ resources:
       en: Use of CRA Business Number
       fr: Utilisation du numéro d’entreprise de l’ARC
     description:
-      en: "Identifies whether the Canada Revenue Agency's Business Number is used in the delivery of the service if the service is delivered to a business."
-      fr: "Identifie si le numéro d’entreprise de l’Agence du Revenu du Canada est utilisé dans la prestation du service, si le service est livré à une entreprise."
+      en: Identifies whether the Canada Revenue Agency's Business Number is used in the delivery of the service if the service is delivered to a business.
+      fr: Identifie si le numéro d’entreprise de l’Agence du Revenu du Canada est utilisé dans la prestation du service si le service est livré à une entreprise.
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
@@ -471,10 +471,10 @@ resources:
     excel_full_text_choices: true
     choices:
       Y:
-        en: "Yes"
+        en: Yes
         fr: Oui
       N:
-        en: "No"
+        en: No
         fr: Non
       NA:
         en: N/A (not a service to businesses)
@@ -497,10 +497,10 @@ resources:
     excel_full_text_choices: true
     choices:
       Y:
-        en: "Yes"
+        en: Yes
         fr: Oui
       N:
-        en: "No"
+        en: No
         fr: Non
       NA:
         en: N/A (not a service to individuals)
@@ -513,10 +513,10 @@ resources:
   - datastore_id: service_channels
     label:
       en: Service Delivery Channels
-      fr: mode de prestation de service
+      fr: Mode de prestation de service
     description:
       en: Identifies the channels by which services are delivered to client groups.
-      fr: Identifie les caneau par lesquels les services sont offerts aux groupes de clients.
+      fr: Identifie les modes par lesquels les services sont offerts aux groupes de clients.
     format_type: Controlled List
     occurrence: Multiple
     datastore_type: _text
@@ -554,15 +554,8 @@ resources:
     description:
       en: |
         Identifies the number of telephone enquiries received for the service in a fiscal year.
-
-        Notes:
-        • If the service is not offered via telephone, please indicate that this field is not applicable (NA).
-        • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : 
-        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -598,15 +591,8 @@ resources:
     description:
       en: |
         Identifies the number of applications submitted in a fiscal year for the online channel.
-
-        Notes:
-        • If the service is not offered online, please indicate that this field is not applicable (NA).
-        • If data is not available, please indicate that there is no data (ND).
       fr: |
         Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : 
-        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -621,10 +607,8 @@ resources:
       en: Number of Applications Submitted by Telephone
       fr: Nombre de demandes soumises par téléphone
     description:
-      en: |
-        Identifies the number of applications submitted in a fiscal year for the telephone channel.
-      fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
+      en: Identifies the number of applications submitted in a fiscal year for the telephone channel.
+      fr: Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -639,17 +623,8 @@ resources:
       en: Number of Applications Submitted In-Person
       fr: Nombre de demandes soumises en personne
     description:
-      en: |
-        Identifies the number of applications received in-person in a fiscal year for the service.
-
-        Notes:
-        • If the service is not offered in-person, please indicate that this field is not applicable (NA).
-        • If data is not available, please indicate that there is no data (ND).
-      fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : 
-        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+      en: Identifies the number of applications received in-person in a fiscal year for the service.
+      fr: Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -664,17 +639,8 @@ resources:
       en: Number of Applications Submitted via Postal Mail
       fr: Nombre de demandes soumises par la poste
     description:
-      en: |
-        Identifies the number of applications received through postal mail in a fiscal year for each service.
-
-        Notes:
-        • If the service cannot be applied for via postal mail, please indicate that this field is not applicable (NA).
-        • If data is not available, please indicate that there is no data (ND).
-      fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : 
-        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+      en: Identifies the number of applications received through postal mail in a fiscal year for each service.
+      fr: Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -689,17 +655,8 @@ resources:
       en: "Number of Applications Submitted via other channels, such as email or fax"
       fr: "Nombre de demandes soumises par les autre modes de prestations, par example courriel ou télécopier"
     description:
-      en: |
-        Identifies the number of applications received through other channels in a fiscal year for each service.
-
-        Notes:
-        • If the service cannot be applied for via other channels, please indicate that this field is not applicable (NA).
-        • If data is not available, please indicate that there is no data (ND).
-      fr: |
-        Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
-        Remarque : 
-        • Si un service n’est pas offert au moyen d’un mode de prestation, veuillez indiquer que cette question est sans objet (NA). 
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (ND).
+      en: Identifies the number of applications received through other channels in a fiscal year for each service.
+      fr: Indique le nombre de demandes reçues au cours d’un exercice pour chacun des modes de prestation suivants.
     obligation: Mandatory
     excel_required: true
     excel_error_formula: 'and(not(isnumber(value({cell}))),{cell}<>"NA",{cell}<>"ND")'
@@ -906,7 +863,7 @@ resources:
       en: "Client Given Opportunity to Provide Feedback on Level of Satisfaction with this Service by Channel"
       fr: "Les clients ont l’occasion de donner une rétroaction sur le niveau de satisfaction de ce service, par canal"
     description:
-      en: "Identifies which channels, if any, provide users of a service an opportunity to provide feedback on their level of satisfaction with the service. Select all that apply."
+      en: "Identifies which channels, if any, provide users of a service an opportunity to provide feedback on their level of satisfaction with the service."
       fr: "Détermine quels canaux, s’il y a lieu, offrent aux utilisateurs d’un service l’occasion de donner une rétroaction sur leur niveau de satisfaction à l’égard du service."
     format_type: Controlled List
     occurrence: Multiple
@@ -1130,8 +1087,8 @@ resources:
       en: Service ID Number
       fr: Numéro d'identification du service
     description:
-      en: The unique number assigned by the department to a service in the inventory to make it easier to refer to specific services.
-      fr: Le numéro unique attribué par le ministère ou l’organisme à un service dans le répertoire afin de faciliter le référencement à des services précis.
+      en: The unique number assigned to a service in the inventory to make it easier to refer to specific services.
+      fr: Le numéro unique attribué à un service dans le répertoire afin de faciliter le référencement à des services précis.
     obligation: Mandatory
     excel_required: true
     format_type: Free text
@@ -1280,7 +1237,7 @@ resources:
       fr: Type de cible   
     description:
       en: Identifies the type of service standard target.
-      fr: identifie le type de cible de la norme de service.
+      fr: Identifie le type de cible de la norme de service.
     obligation: Mandatory
     excel_required: true
     format_type: Controlled List
@@ -1317,10 +1274,8 @@ resources:
     description:
       en: |
         Identifies the number of final outputs issued appropriate to the service (eg. payments issued, requests completed, etc) during the fiscal year that met a particular service standard target for a service.
-        • If data is not available, please indicate that there is no data (“ND”).
       fr: |
         Indique le nombre d’opérations de service effectuées (p. ex. les appels auxquels on a répondu, les paiements émis, les demandes traitées, etc.) au cours de l’exercice qui ont respecté une norme relative aux services particulière à un service. 
-        • Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »).
     obligation: Mandatory
     excel_required: true
     format_type: Numeric or ND
@@ -1385,7 +1340,7 @@ resources:
       en: Service Standard Channel
       fr: Mode de prestation de la norme de service
     description:
-      en: "Identifies which service channel the service standard applies to"
+      en: Identifies the service channel to which the service standard applies
       fr: Identifie à quelle mode de prestation de service la norme de service est appliquée
     format_type: Controlled List
     occurrence: Multiple
@@ -1422,7 +1377,7 @@ resources:
       en: Comments on the service standard channel (English)
       fr: Commentaires sur le mode de prestation de la norme de service (anglais)
     description:
-      en: "Comments related to the service standard channel"
+      en: Commentaires sur le mode de prestation de la norme de service (anglais)
       fr: Commentaires en lien au mode de prestation de la norme de service
     obligation: Optional
     format_type: Free text
@@ -1435,7 +1390,7 @@ resources:
       en: Comments on the service standard channel (French)
       fr: Commentaires sur le mode de prestation de la norme de service (Francais)
     description:
-      en: "Comments related to the service standard channel"
+      en: Comments related to the service standard channel
       fr: Commentaires en lien au mode de prestation de la norme de service
     obligation: Optional
     format_type: Free text
@@ -1448,7 +1403,7 @@ resources:
       en: Comments on the service standard in general (English)
       fr: Commentaires sur la norme de service en general (anglais)
     description:
-      en: "Comments related to the service standard in general"
+      en: Comments related to the service standard in general
       fr: Commentaires en lien à la norme de service en general
     obligation: Optional
     format_type: Free text
@@ -1461,7 +1416,7 @@ resources:
       en: Comments on the service standard in general (French)
       fr: Commentaires sur la norme de service en general (Francais)
     description:
-      en: "Comments related to the service standard in general"
+      en: Comments related to the service standard in general
       fr: Commentaires en lien à la norme de service en general
     obligation: Optional
     format_type: Free text
@@ -1474,9 +1429,8 @@ resources:
       en: URL to Real-Time Performance Results (English)
       fr: URL aux résultats de rendement en temps réel (anglais)
     description:
-      en: "Identifies the departmental webpage where the real-time performance results for a service are published. 
-    • If data is not available, please indicate that there is no data (“ND”)."
-      fr: "Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »)."
+      en: Identifies the departmental webpage where the real-time performance results for a service are published.
+      fr: Identifie la site Web du service sur laquelle les résultats de performance en temps réel d'un service sont publiés.
     obligation: Optional
     excel_required: true
     format_type: Free text
@@ -1490,10 +1444,8 @@ resources:
       en: URL to Real-Time Performance Results (French)
       fr: URL aux résultats de rendement en temps réel (français)
     description:
-      en: |
-        Identifies the departmental webpage where the real-time performance results for a service are published.
-        • If data is not available, please indicate that there is no data (“ND”).
-      fr: "Si aucune donnée n’est disponible, veuillez indiquer qu’il n’y a aucune donnée (« ND »)."
+      en: Identifies the departmental webpage where the real-time performance results for a service are published.
+      fr: Identifie la site Web du service sur laquelle les résultats de performance en temps réel d'un service sont publiés
     obligation: Optional
     excel_required: true
     format_type: Free text
